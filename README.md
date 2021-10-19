@@ -169,7 +169,7 @@ yarn add @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
 .babelrc.jsは削除しておく。 \
-typescriptでは特に利用が無い限り不要。
+typescriptでは特に理由が無い限り不要。
 
 ## lintも変更したしビルド
 
