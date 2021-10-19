@@ -130,7 +130,7 @@ pwsh推奨。linux, macの人はpwshをインストールして使ってみよ�
 jsx->tsxも同じ要領で書く。
 
 ```powershell
-# -WhatIfにより、想定されたファイルがリネーム
+# -WhatIfにより、想定されたファイルがリネームされるかどうか確認
 Get-ChildItem -Recurse src/ |
 Where-Object {$_.Name -match ".js$"} | 
 Rename-Item -NewName { $_ -replace "\.js$", ".ts" } -WhatIf
