@@ -58,17 +58,35 @@ typescript採用して、ts周りのライブラリの管理考えたらts採用
 
 ## 結論
 
-1. 最初からtypescriptにしとこう。(nodejsでなくてブラウザ側だと管理コスト高い可能性もある。)
+1. typescriptにしとこう。(nodejsでなくてブラウザ側だと管理コスト高い可能性もある。)
 2. // @ts-checkを使う(デメリット無し)
 
-
-## ts-checkを使う方法
+## ts-checkを使う方法1
 
 // @ts-checkとjsファイルの一行目に記述してやる。 \
+
+```shell
+# typescriptの方情報だけ下のようにインストールしておく。
+npm install @types/react
+```
+
+## ts-checkを使う方法2
+
+jsdocでちゃんと型を書いておく。
+
+```js
+// 変数の場合
+/** @type {number} */
+let count = 0;
+
+```
+
+## ts-checkを使う方法3
+
 こうするとvscodeでtypescriptとしてのチェックが入り、文法的にエラーだったら赤く表示されるになる。
 ただし、*jsdocで型を書いて*おくこと。こうするとエラーもインテリセンスも効く。
 
 (どういうことかというと、)
 
 結局の所jsの文法チェックの杜撰さが嫌いなので
-interface
+interface 

@@ -1,0 +1,3 @@
+[submodule "abcdQuetion"]
+	path = abcdQuetion
+	url = git@github.com:KatsutoshiOtogawa/abcdQuetion.git
