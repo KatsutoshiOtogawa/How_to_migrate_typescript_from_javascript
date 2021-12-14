@@ -5,6 +5,17 @@ author: KatusothiOtogawa
 date: 2021-12-18
 ---
 
+## 自己紹介
+
+フリーのバックエンドエンジニア。DB周り、table設計とか。 \
+統計、分析システムのDB検索を1hから6mに短縮する男。 \
+php, python, goとかのバックエンド側のframeworkも普通にわかります。 \
+[twitter: @k_otogawa](https://twitter.com/k_otogawa)
+
+## 人はなぜtypescriptにするか
+
+別に変えなくてもいいじゃん?
+
 ## javascriptの難点
 
 1. phpと同じく文字列か数字か曖昧
@@ -15,7 +26,7 @@ date: 2021-12-18
 
 1. vscodeのインテリセンスがすべてany...
 2. 職人じゃないと読めないコード書きがち
-3. なんかよくわからない, けど動く。
+3. なんかよくわからない, けど*動く*。
 4. コメント書かないやつ、全体見れないやつが出てくると*崩壊*する。
 
 ## typescript化のために確認すべきこと
