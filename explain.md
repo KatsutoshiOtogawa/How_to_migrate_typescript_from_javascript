@@ -7,6 +7,7 @@ date: 2021-12-18
 
 ## 自己紹介
 
+音川 勝俊 \
 フリーのバックエンドエンジニア。DB周り、table設計とか。 \
 統計、分析システムのDB検索を1hから6mに短縮する男。 \
 php, python, goとかのバックエンド側のframeworkも普通にわかります。 \
@@ -44,7 +45,13 @@ php, python, goとかのバックエンド側のframeworkも普通にわかり�
 ## 直接typescriptにする方法1
 
 1. typescript用のライブラリの追加(linter除く)
+
+```shell
+npm install --save-dev @types/react
+```
+
 2. tsconfig.json を取得するためにcreate-react-appでプロジェクト作成
+
 3. jsconfig.jsonの内容をtsconfig.jsonに移す
 
 ## 直接typescriptにする方法2
@@ -93,7 +100,7 @@ tsconfig.jsonに下記のようにallowJSのキー追加
 メリット
 
 1. javascriptとtypescriptを混ぜることができる。
-2. 少しづつ本番のソースコードをtypescript化するときに良いかもしれない。
+2. 少しづつ本番のソースコードをtypescript化するときに良いかも。
 3. create-react-app --template typescript create-next-app --ts としたときにデフォルトでできるtsconfig.jsonに書かれているのでバグ少なそう
 
 ## allowJSを使う方法3
@@ -106,7 +113,8 @@ tsconfig.jsonに下記のようにallowJSのキー追加
 
 ## ts-checkを使う方法1
 
-// @ts-checkとjsファイルの一行目に記述してやる。 \
+// @ts-check \
+とjsファイルの一行目に記述してやる。
 
 ```shell
 # typescriptの方情報だけ下のようにインストールしておく。
@@ -121,7 +129,6 @@ jsdocでちゃんと型を書いておく。
 // 変数の場合
 /** @type {number} */
 let count = 0;
-
 ```
 
 ## ts-checkを使う方法3
@@ -129,7 +136,6 @@ let count = 0;
 関数リテラル
 
 ```js
-
 /** 
  * @type {() => number[][]} 戻り値は答えの組み合わせを配列で返す。インデックスが若い方からa, b, c, dとする。
  * @description a+b+c+d=abcdを満たす自然数を求める関数。
@@ -158,7 +164,6 @@ const abcdQuetion = () => {
   }
   return result;
 }
-
 ```
 
 ## ts-checkを使う方法4
@@ -184,8 +189,15 @@ reactの場合は下のような感じ。
 ## ts-checkを使う方法5
 
 こうするとvscodeでtypescriptとしてのチェックが入り、文法的にエラーだったら赤く表示されるになる。
-ただし、*jsdocで型を書いて*おくこと。こうするとエラーもインテリセンスも効く。
+ただし、*jsdocで型を書いて*おくこと。
 
+## ts-checkを使う方法6
+
+メリット
+
+1. 開発と並行してtypescript化を進めることができる。
+2. 特定のjsだけtsのインテリセンスが効くようにするなどが容易
+3. クライアントサイドでtsのためだけにwebpackなどを導入する必要がなくなる。
 
 ## 結論
 
