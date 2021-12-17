@@ -117,7 +117,7 @@ tsconfig.jsonに下記のようにallowJSのキー追加
 とjsファイルの一行目に記述してやる。
 
 ```shell
-# typescriptの方情報だけ下のようにインストールしておく。
+# typescriptの型情報だけ下のようにインストールしておく。
 npm install @types/react
 ```
 
