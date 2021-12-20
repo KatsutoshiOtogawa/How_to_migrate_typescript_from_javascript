@@ -1,6 +1,6 @@
 ---
 title: Reactのtypescript化について
-subtitle: サブタイトル名
+subtitle: ts化以外の例も含む
 author: KatusothiOtogawa
 date: 2021-12-18
 ---
