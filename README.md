@@ -1,10 +1,32 @@
 # How_to_migrate_typescript_from_javascript
 
-react を後からtypescript化する方法です。
+## 最初に
 
-ブランチを分けてやってみてください。
-
+react を後からtypescript化する方法です。 \
+ブランチを分けてやってみてください。 \
 はっきりいってかなり*根気が必要*です。
+
+大抵の現場では開発を進めながらtypescript化が困難な場合が多いと思います。 \
+その場合は // @ts-checkを使ってtypescriptのインテリセンスのみ有効にする方法をお勧めします。 \
+// @ts-checkの例は react_example, abcdQuestionにあります。
+
+## ディレクトリの構成
+
+- abcdQuetsion/ // @ts-checkを使った(高校数学の問題文)
+- react_example/ // @ts-checkを使ったリアクトの例
+- out/ pandocなどで実行時の生成物が入ります。
+- README.md reactのts化の方法の詳細
+- explain.md LT発表時に使った資料
+- speak.md LT発表時に話した内容（一部アドリブあり。）
+
+## markdownをスライドで見たい方
+
+プロジェクトのoutディレクトリにパワーポイントで作成されます。
+
+```bash
+# 発表用のスライド作成
+pandoc explain.md -o out/explain.pptx
+```
 
 ## エディタについて、
 
