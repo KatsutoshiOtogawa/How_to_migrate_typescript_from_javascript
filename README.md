@@ -385,10 +385,10 @@ HelloComponent.propTypes = {
 
 typescriptはinterfaceのextendもコンポジット(interfaceのプロパティにinterfaceを持たせるという形で)も両方できる。 \
 
-例えば、CustomButtonというコンポーネントとどちらの方がいいか?
+例えば、CustomButtonというコンポーネントとどちらの方がいいか? \
 結論から言うと変更が少ない方が良い。大抵の場合はコンポジットの方が変更が少なく、変更に強い。
 
-extendsを使うと下のような問題が起きる可能性がある。
+extendsを使うと下のような問題が起きる可能性がある。 \
 このような変更が起きると修正箇所が増えるので気をつけること。
 
 ```ts
@@ -597,7 +597,7 @@ if ( name !== undefined ) {
 const HelloClasses = classNames(cardClassesShape);
 ```
 
-これをどのような時に使うかというと例えば下のようにreactでclass名を引数にとるかどうか。
+これをどのような時に使うかというと例えば下のようにreactでclass名を引数にとるかどうか。 \
 引数が渡されるかわからない時に役に立つ。
 
 ```ts
